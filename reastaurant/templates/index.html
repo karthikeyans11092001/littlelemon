@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu and Booking</title>
+</head>
+<body>
+    <h1>Menu:</h1>
+    <ul>
+        {% for item in menu %}
+        <li>{{ item.name }} - {{ item.description }} - {{ item.price }}</li>
+        {% endfor %}
+    </ul>
+    
+    <h1>Bookings:</h1>
+    <ul>
+        {% for booking in bookings %}
+        <li>{{ booking.customer_name }} - Table {{ booking.table_number }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
